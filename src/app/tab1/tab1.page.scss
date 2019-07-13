@@ -4,21 +4,28 @@
 }
 
 .welcome-card, .welcome-card * {
-  // background: rgb(245, 245, 248) !important;
   border: none;
   box-shadow: none;
 }
 
-.item-content {
-  background-color:red;
+.profile-card, .profile-card * {
+  background: rgb(245, 245, 248) !important;
+}
+
+.feeds {
+  padding: 0px !important;
+}
+
+ion-thumbnail {
+  min-width: 150px;    
+  min-height: 180px;
 }
 
 ion-progress-bar {
   height: 14px;
-  // border-radius: 20px;
 }
 
-ion-avatar {
+.profile {
   height: 80px;
   width: 80px;
 }
