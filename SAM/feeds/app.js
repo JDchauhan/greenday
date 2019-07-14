@@ -6,7 +6,7 @@ exports.lambda = async function (event) {
       if (err) {
         reject(err)
       } else {
-        resolve(body);
+        resolve(body[event.queryStringParameters.id]);
       }
     })
   })
@@ -20,18 +20,22 @@ exports.lambdaHandler = async (event, context) => {
   try {
 
     let x = await this.lambda(event)
-    console.log(x)
-    console.log("hei")
+    
     response = {
       'statusCode': 200,
-      'body': JSON.stringify({
+      'data': JSON.stringify({
         message: x,
         // location: ret.data.trim()
       })
     }
   } catch (err) {
-    console.log(err);
-    return err;
+    response = {
+      'statusCode': 400,
+      'body': JSON.stringify({
+        data: "err",
+        // location: ret.data.trim()
+      })
+    }
   }
 
   return response

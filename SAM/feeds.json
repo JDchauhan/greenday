@@ -1,48 +1,46 @@
-{
-    "data": [
-        {
-            "author_img": "/assets/icon/user.jpg",
-            "author": "Jane",
-            "flapper": "FireBird",
-            "time": "Monday, 7:27 PM",
-            "count": 1,
-            "title": "One Cup Per Child",
-            "subtitle": "FireBird",
-            "image": "/assets/icon/user.jpg",
-            "body": "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
-        },
-        {
-            "author_img": "/assets/icon/user.jpg",
-            "author": "Jane",
-            "flapper": "FireBird",
-            "time": "Monday, 7:27 PM",
-            "count": 1,
-            "title": "One Cup Per Child",
-            "subtitle": "FireBird",
-            "image": "/assets/icon/user.jpg",
-            "body": "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
-        },
-        {
-            "author_img": "/assets/icon/user.jpg",
-            "author": "Jane",
-            "flapper": "FireBird",
-            "time": "Monday, 7:27 PM",
-            "count": 1,
-            "title": "One Cup Per Child",
-            "subtitle": "FireBird",
-            "image": "/assets/icon/user.jpg",
-            "body": "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
-        },
-        {
-            "author_img": "/assets/icon/user.jpg",
-            "author": "Jane",
-            "flapper": "FireBird",
-            "time": "Monday, 7:27 PM",
-            "count": 1,
-            "title": "One Cup Per Child",
-            "subtitle": "FireBird",
-            "image": "/assets/icon/user.jpg",
-            "body": "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
-        }
-    ]
-}
+[
+    {
+        "author_img": "/assets/icon/user.jpg",
+        "author": "Jane",
+        "flapper": "FireBird",
+        "time": "Monday, 7:27 PM",
+        "count": 1,
+        "title": "One Cup Per Child",
+        "subtitle": "FireBird",
+        "image": "/assets/icon/user.jpg",
+        "body": "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
+    },
+    {
+        "author_img": "/assets/icon/user.jpg",
+        "author": "Jane",
+        "flapper": "FireBird",
+        "time": "Monday, 7:27 PM",
+        "count": 1,
+        "title": "One Cup Per Child",
+        "subtitle": "FireBird",
+        "image": "/assets/icon/user.jpg",
+        "body": "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
+    },
+    {
+        "author_img": "/assets/icon/user.jpg",
+        "author": "Jane",
+        "flapper": "FireBird",
+        "time": "Monday, 7:27 PM",
+        "count": 1,
+        "title": "One Cup Per Child",
+        "subtitle": "FireBird",
+        "image": "/assets/icon/user.jpg",
+        "body": "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
+    },
+    {
+        "author_img": "/assets/icon/user.jpg",
+        "author": "Jane",
+        "flapper": "FireBird",
+        "time": "Monday, 7:27 PM",
+        "count": 1,
+        "title": "One Cup Per Child",
+        "subtitle": "FireBird",
+        "image": "/assets/icon/user.jpg",
+        "body": "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
+    }
+]
