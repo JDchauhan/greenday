@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Http } from '@angular/http';
-import { map, delay } from 'rxjs/operators';
+import { map, delay, count } from 'rxjs/operators';
 import { computeStackId } from '@ionic/angular/dist/directives/navigation/stack-utils';
 
 @Component({
@@ -27,13 +27,14 @@ export class Tab1Page {
         author: "Jane",
         flapper: "FireBird",
         time: "Monday, 7:27 PM",
-        count: "1",
+        count: 1,
         title: "One Cup Per Child",
         subtitle: "FireBird",
         image: "/assets/icon/user.jpg",
         body: "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
       }
-      this.stories.push(this.data)
+      this.data.count += this.stories.length
+      this.stories.unshift(this.data)
   }
 
   load() {
@@ -47,7 +48,7 @@ export class Tab1Page {
 
   async doRefresh(event) {
     await this.storyUpdater()
-    
+
     event.target.complete();
     
   }
