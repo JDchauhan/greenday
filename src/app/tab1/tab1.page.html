@@ -1,3 +1,4 @@
+
 <ion-header no-border>
   <ion-toolbar>
     <ion-buttons slot="start">
@@ -8,12 +9,19 @@
 
     <ion-buttons slot="end">
       <ion-button>
-        <ion-icon slot="icon-only" name="menu"></ion-icon>
+        <ion-icon slot="icon-only" name="menu">
+        </ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
-
 </ion-header>
+
+<!-- <ion-fab vertical="top" horizontal="center" slot="fixed" ngStyle="{{this.isRefresh}}">
+  <ion-fab-button (click)="doRefresh($event)">
+    <ion-icon name="refresh"></ion-icon>
+  </ion-fab-button>
+</ion-fab> -->
+
 <ion-content>
 
   <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)" pullFactor="0.5" pullMin="50" pullMax="100">

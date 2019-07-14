@@ -14,8 +14,10 @@ export class Tab1Page {
   stories: any;
   res: any;
   index: any;
+  isRefresh: any;
 
   constructor(public http: Http) {
+    // this.isRefresh = "display:none"
     this.stories = []
     this.index = 4
     this.init()
