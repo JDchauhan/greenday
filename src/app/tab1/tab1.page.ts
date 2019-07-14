@@ -12,7 +12,8 @@ export class Tab1Page {
 
   data: any;
   stories: any;
-  
+  res: any;
+
   constructor(public http: Http) {
     this.stories = []
     // setInterval(()=>{
@@ -21,27 +22,17 @@ export class Tab1Page {
   }
 
   async storyUpdater() {
-      let res = await this.load()
-      this.data = {
-        author_img: "/assets/icon/user.jpg",
-        author: "Jane",
-        flapper: "FireBird",
-        time: "Monday, 7:27 PM",
-        count: 1,
-        title: "One Cup Per Child",
-        subtitle: "FireBird",
-        image: "/assets/icon/user.jpg",
-        body: "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
-      }
-      this.data.count += this.stories.length
-      this.stories.unshift(this.data)
+      this.res = await this.load()
+      this.res.data.forEach(story => {
+        this.stories.unshift(story)  
+      });
   }
 
   load() {
     return new Promise(resolve => {
       this.http.get('http://127.0.0.1:3000/feeds').pipe(map(data => data)).subscribe(data => {
         this.data = data;
-        resolve(this.data);
+        resolve(JSON.parse(this.data._body));
       });
     });
   }
