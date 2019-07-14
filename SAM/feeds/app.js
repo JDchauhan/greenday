@@ -12,27 +12,30 @@ const request = require('request');
  * 
  */
 
-exports.lambda = async function (event) {
+exports.fetchStory = async function (event, id) {
   const promise = new Promise(function (resolve, reject) {
     request('https://pureskin-dev.s3-us-west-2.amazonaws.com/export/feeds.json', { json: true }, (err, res, body) => {
       if (err) {
         reject(err)
       } else {
-        resolve(body);
-        // resolve(body[event.queryStringParameters.id]);
+        if (id !== null) {
+          resolve([body[id]]);
+        } else {
+          resolve(body.splice(0, 4));
+        }
       }
     })
   })
   return promise
 }
 
-
 let response;
 
 exports.lambdaHandler = async (event, context) => {
   try {
-
-    let x = await this.lambda(event)
+    let id = event.queryStringParameters && event.queryStringParameters.id ?
+      event.queryStringParameters.id : null
+    let x = await this.fetchStory(event, id)
     response = {
       'statusCode': 200,
       "headers": {
