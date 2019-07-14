@@ -10,31 +10,11 @@ import { computeStackId } from '@ionic/angular/dist/directives/navigation/stack-
 })
 export class Tab1Page {
 
-  // constructor() {}
   data: any;
-
+  stories: any;
+  
   constructor(public http: Http) {
-    this.data = [{
-      author_img: "/assets/icon/user.jpg",
-      author: "Jane",
-      flapper: "FireBird",
-      time: "Monday, 7:27 PM",
-      count: "1",
-      title: "One Cup Per Child",
-      subtitle: "FireBird",
-      image: "/assets/icon/user.jpg",
-      body: "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
-    }, {
-      author_img: "/assets/icon/user.jpg",
-      author: "Jane",
-      flapper: "FireBird",
-      time: "Monday, 7:27 PM",
-      count: "1",
-      title: "One Cup Per Child",
-      subtitle: "FireBird",
-      image: "/assets/icon/user.jpg",
-      body: "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
-    }]
+    this.stories = []
     // setInterval(()=>{
     //   this.storyUpdater()
     // },3000)
@@ -42,22 +22,34 @@ export class Tab1Page {
 
   async storyUpdater() {
       let res = await this.load()
-      console.log(res)
+      this.data = {
+        author_img: "/assets/icon/user.jpg",
+        author: "Jane",
+        flapper: "FireBird",
+        time: "Monday, 7:27 PM",
+        count: "1",
+        title: "One Cup Per Child",
+        subtitle: "FireBird",
+        image: "/assets/icon/user.jpg",
+        body: "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
+      }
+      this.stories.push(this.data)
   }
 
   load() {
-    if (this.data) {
-      // already loaded data
-      return Promise.resolve(this.data);
-    }
-
-    // don't have the data yet
     return new Promise(resolve => {
       this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').pipe(map(data => data)).subscribe(data => {
         this.data = data;
         resolve(this.data);
       });
     });
+  }
+
+  async doRefresh(event) {
+    await this.storyUpdater()
+    
+    event.target.complete();
+    
   }
 }
 
