@@ -14,14 +14,30 @@ export class Tab1Page {
   data: any;
 
   constructor(public http: Http) {
-
-    // this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
-    //     this.posts = data.data.children;
-    // });
-
-    setInterval(()=>{
-      this.storyUpdater()
-    },3000)
+    this.data = [{
+      author_img: "/assets/icon/user.jpg",
+      author: "Jane",
+      flapper: "FireBird",
+      time: "Monday, 7:27 PM",
+      count: "1",
+      title: "One Cup Per Child",
+      subtitle: "FireBird",
+      image: "/assets/icon/user.jpg",
+      body: "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
+    }, {
+      author_img: "/assets/icon/user.jpg",
+      author: "Jane",
+      flapper: "FireBird",
+      time: "Monday, 7:27 PM",
+      count: "1",
+      title: "One Cup Per Child",
+      subtitle: "FireBird",
+      image: "/assets/icon/user.jpg",
+      body: "Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor, Loreum epsium dollor"
+    }]
+    // setInterval(()=>{
+    //   this.storyUpdater()
+    // },3000)
   }
 
   async storyUpdater() {
