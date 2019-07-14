@@ -7,7 +7,7 @@
       "request": "attach",
       "address": "localhost",
       "port": 6998,
-      "localRoot": "${workspaceRoot}/feeds",
+      "localRoot": "${workspaceRoot}/SAM/feeds",
       "remoteRoot": "/var/task",
       "protocol": "inspector",
       "stopOnEntry": false

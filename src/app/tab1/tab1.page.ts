@@ -39,7 +39,7 @@ export class Tab1Page {
 
   load() {
     return new Promise(resolve => {
-      this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').pipe(map(data => data)).subscribe(data => {
+      this.http.get('http://127.0.0.1:3000/feeds').pipe(map(data => data)).subscribe(data => {
         this.data = data;
         resolve(this.data);
       });
